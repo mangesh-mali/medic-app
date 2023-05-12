@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* before angular 15 and till angular 14 */
+/* @import "~bootstrap\dist\css\bootstrap.css"; */
+
+/* after and onwards angular 15 */
+@import "~bootstrap/dist/css/bootstrap.css";
