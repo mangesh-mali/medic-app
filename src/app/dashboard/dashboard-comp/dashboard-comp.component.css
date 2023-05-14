@@ -1,0 +1,46 @@
+.firstRow {
+    /* background-color: aqua; */
+    /* height: 10px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 260px;
+    padding: 10px;
+    display: flex;
+}
+
+.cardRow {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rowImg {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.count {
+    color: #336cfb;
+    font-size: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    color: black;
+}
+
+td {
+    padding: 5px;
+}
+
+.LAImg {
+    border-radius: 50%;
+}
