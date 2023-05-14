@@ -9,7 +9,7 @@
       </div>
       <div class="sub-title">
         <ul *ngFor="let sT of subTitle" style="list-style-type: none;">
-          <a class="firstAnchor" href="#">
+          <a class="firstAnchor" routerLink="sT.routeLink">
             <li><img class="subTitleImg" [src]="sT.logoURL" alt=""> {{sT.logoName}}</li>
           </a>
         </ul>
@@ -28,6 +28,62 @@
   </div>
 
   <div class="rightside">
-    <router-outlet></router-outlet>
+    <div class="container">
+      <!-- <div class="search-container">
+      <form action="/action_page.php">
+        <input class="search-ip" type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"><img src="../assets/search.png" alt=""></i></button>
+      </form>
+    </div> -->
+
+      <form id="search-form">
+        <div class="row">
+          <div class="col-12">
+            <div class="row no-gutters">
+              <div class="col-lg-4 col-md-4 col-sm-8 p-0">
+                <input type="text" placeholder="Type page's title" class="form-control" id="search" name="search">
+              </div>
+              <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                <button type="submit" class="btn btn-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-search">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="col-lg-5"></div>
+              <span class="col-lg-1 bell fa-stack fa-3x" data-count="5">
+                <i class="fa fa-circle fa-stack-2x"><img class="bell" src="../assets/notification.png" alt=""></i>
+                <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+              </span>
+
+
+              <div class="col-lg-1 dropdown-link-wrap">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../assets/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink="Health-Products">Edit Account</a></li>
+                    <li><a class="dropdown-item" routerLink="life-insurance">User Profile</a></li>
+                    <li><a class="dropdown-item" routerLink="car">Settings</a></li>
+                    <li><a class="dropdown-item" routerLink="home">Log Out</a></li>
+
+                  </ul>
+                </li>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
