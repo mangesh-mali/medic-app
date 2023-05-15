@@ -9,7 +9,7 @@
       </div>
       <div class="sub-title">
         <ul *ngFor="let sT of subTitle" style="list-style-type: none;">
-          <a class="firstAnchor" routerLink="sT.routeLink">
+          <a class="firstAnchor" [routerLink]="sT.routeLink">
             <li><img class="subTitleImg" [src]="sT.logoURL" alt=""> {{sT.logoName}}</li>
           </a>
         </ul>

@@ -1,1 +1,57 @@
 <p>appointments-comp works!</p>
+
+
+<table>
+    <tr>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Visit Time</th>
+        <th>Number</th>
+        <th>Doctor</th>
+        <th>Injury / Condition</th>
+        <th style="text-align: center;">Action</th>
+    </tr>
+    <tr *ngFor="let i of data">
+        <td><img class="LAImg" [src]="i.img" alt=""></td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.fromTo}}</td>
+        <td>{{i.number}}</td>
+        <td>{{i.doctor}}</td>
+        <td>{{i.injury}}</td>
+        <td>
+            <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
+            <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+
+<button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addApp" (click)="openPopup()"><img
+        src="../../../assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
+</button>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Appointment</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control mb-2" placeholder="Name">
+                <input type="text" class="form-control mb-2" placeholder="Doctor">
+                <input type="email" class="form-control mb-2" placeholder="Email">
+                <input type="date" class="form-control mb-2" placeholder="Date">
+                <input type="text" class="form-control mb-2" placeholder="Time From">
+                <input type="text" class="form-control mb-2" placeholder="Time To">
+                <input type="number" class="form-control mb-2" placeholder="Number">
+                <input type="text" class="form-control mb-2" placeholder="Injury">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

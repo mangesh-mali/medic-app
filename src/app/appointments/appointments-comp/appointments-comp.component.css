@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+}
+
+th {
+    color: black;
+}
+
+td {
+    padding: 5px;
+}
+
+.LAImg {
+    border-radius: 50%;
+}
+
+.modal {
+    background: rgba(0, 0, 0, .5);
+}
+
+.addApp {
+    position: fixed;
+    bottom: 30px;
+    right: -10px;
+
+}
