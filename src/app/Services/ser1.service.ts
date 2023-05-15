@@ -4,12 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DashSerService {
+export class Ser1Service {
 
-  constructor(private http: HttpClient) {
-
-  }
-
+  constructor(private http: HttpClient) { }
   getData() {
     return this.http.get("http://localhost:3000/dashData");
   }

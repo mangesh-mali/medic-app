@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DashSerService } from '../dash-ser.service';
+import { Ser1Service } from 'src/app/Services/ser1.service';
 
 @Component({
   selector: 'app-dashboard-comp',
@@ -11,7 +11,7 @@ export class DashboardCompComponent {
   public firstRowData: any;
   dataSource: any;
 
-  constructor(private ser: DashSerService) {
+  constructor(private ser: Ser1Service) {
     this.ser.getData().subscribe(
       ((res: any) => {
         console.log(res);
