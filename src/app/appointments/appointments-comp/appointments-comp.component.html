@@ -37,26 +37,35 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Edit Appointment</h4>
+                <h4 class="modal-title" *ngIf="addButtonAction">Add Appointment</h4>
+                <h4 class="modal-title" *ngIf="!addButtonAction">Edit Appointment</h4>
             </div>
             <form #frm="ngForm">
                 <div class="modal-body">
-                    <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel" ngModel>
-                    <input type="text" class="form-control mb-2" placeholder="Doctor" name="doc" #doc="ngModel" ngModel>
-                    <input type="email" class="form-control mb-2" placeholder="Email" name="eml" #eml="ngModel" ngModel>
-                    <input type="date" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel" ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel" ngModel
+                        [(ngModel)]="nm">
+                    <input type="text" class="form-control mb-2" placeholder="Doctor" name="doctor" #doctor="ngModel"
+                        ngModel [(ngModel)]="doc">
+                    <input type="email" class="form-control mb-2" placeholder="Email" name="email" #email="ngModel"
+                        ngModel [(ngModel)]="eml">
+                    <input type="text" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel" ngModel
+                        [(ngModel)]="dt">
                     <input type="text" class="form-control mb-2" placeholder="Time From" name="timeFrom"
-                        #timeFrom="ngModel" ngModel>
+                        #timeFrom="ngModel" ngModel [(ngModel)]="tF">
                     <input type="text" class="form-control mb-2" placeholder="Time To" name="timeTo" #timeTo="ngModel"
-                        ngModel>
-                    <input type="number" class="form-control mb-2" placeholder="Number" name="num" #num="ngModel"
-                        ngModel>
+                        ngModel [(ngModel)]="tT">
+                    <input type="number" class="form-control mb-2" placeholder="Number" name="number" #number="ngModel"
+                        ngModel [(ngModel)]="num">
                     <input type="text" class="form-control mb-2" placeholder="Injury" name="injury" #injury="ngModel"
-                        ngModel>
+                        ngModel [(ngModel)]="inj">
 
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-info" (click)="addApp(frm)">Add Appointment</button>
+                    <button type="submit" *ngIf="addButtonAction" class="btn btn-success" (click)="addApp(frm)">Add
+                        Appointment</button>
+                    <button type="submit" *ngIf="!addButtonAction" class="btn btn-warning"
+                        (click)="updateApp(frm)">Update
+                        Appointment</button>
                     <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
                 </div>
             </form>

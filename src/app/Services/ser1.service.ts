@@ -15,11 +15,21 @@ export class Ser1Service {
     return this.http.get("http://localhost:3000/lastAppoint");
   }
 
+  //Appointments API starts
   getAppointments() {
-    return this.http.get("http://localhost:3000/appointments")
+    return this.http.get("http://localhost:3000/appointments");
+  }
+
+  addAppointments(a: any) {
+    return this.http.post("http://localhost:3000/appointments", a);
+  }
+
+  updateAppointment(a: any) {
+    return this.http.put("http://localhost:3000/appointments/" + a.id, a);
   }
 
   delAppointments(a: any) {
     return this.http.delete("http://localhost:3000/appointments/" + a);
   }
+  //Appointments API ends
 }
