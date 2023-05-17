@@ -31,7 +31,7 @@
 
 
 <button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addApp" (click)="openPopup()"><img
-        src="../../../assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
+        src="assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
 </button>
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
     <div class="modal-dialog" role="document">
@@ -39,19 +39,27 @@
             <div class="modal-header">
                 <h4 class="modal-title">Edit Appointment</h4>
             </div>
-            <div class="modal-body">
-                <input type="text" class="form-control mb-2" placeholder="Name">
-                <input type="text" class="form-control mb-2" placeholder="Doctor">
-                <input type="email" class="form-control mb-2" placeholder="Email">
-                <input type="date" class="form-control mb-2" placeholder="Date">
-                <input type="text" class="form-control mb-2" placeholder="Time From">
-                <input type="text" class="form-control mb-2" placeholder="Time To">
-                <input type="number" class="form-control mb-2" placeholder="Number">
-                <input type="text" class="form-control mb-2" placeholder="Injury">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
-            </div>
+            <form #frm="ngForm">
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel" ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Doctor" name="doc" #doc="ngModel" ngModel>
+                    <input type="email" class="form-control mb-2" placeholder="Email" name="eml" #eml="ngModel" ngModel>
+                    <input type="date" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel" ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Time From" name="timeFrom"
+                        #timeFrom="ngModel" ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Time To" name="timeTo" #timeTo="ngModel"
+                        ngModel>
+                    <input type="number" class="form-control mb-2" placeholder="Number" name="num" #num="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Injury" name="injury" #injury="ngModel"
+                        ngModel>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-info" (click)="addApp(frm)">Add Appointment</button>
+                    <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

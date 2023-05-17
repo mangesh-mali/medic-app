@@ -18,22 +18,22 @@
   },
   "dashData": [
     {
-      "imgFile": "../../../assets/mdeical.png",
+      "imgFile": "assets/mdeical.png",
       "title": "Appointments",
       "count": 213
     },
     {
-      "imgFile": "../../../assets/mdeical.png",
+      "imgFile": "assets/patient - Copy.png",
       "title": "New patients",
       "count": 104
     },
     {
-      "imgFile": "../../../assets/mdeical.png",
+      "imgFile": "assets/blood.png",
       "title": "Operations",
       "count": 23
     },
     {
-      "imgFile": "../../../assets/mdeical.png",
+      "imgFile": "assets/money.png",
       "title": "Hospital Earning",
       "count": "$5238"
     }

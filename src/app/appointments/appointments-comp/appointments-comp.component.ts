@@ -31,6 +31,10 @@ export class AppointmentsCompComponent {
     )
   }
 
+  addApp(f: any) {
+    console.log(f.value);
+  }
+
   edit(i: any) {
     console.log(i);
 
