@@ -32,4 +32,22 @@ export class Ser1Service {
     return this.http.delete("http://localhost:3000/appointments/" + a);
   }
   //Appointments API ends
+
+  //Doctor API starts
+  getDoc() {
+    return this.http.get("http://localhost:3000/doctors");
+  }
+
+  addDoc(a: any) {
+    return this.http.post("http://localhost:3000/doctors", a);
+  }
+
+  updateDoc(a: any) {
+    return this.http.put("http://localhost:3000/doctors/" + a.id, a);
+  }
+
+  delDoc(a: any) {
+    return this.http.delete("http://localhost:3000/doctors/" + a);
+  }
+  //Doctor API ends
 }

@@ -11,7 +11,7 @@ export class AppComponent {
   public subTitle: any = [
     { logoURL: 'assets/dashboard.png', logoName: 'Dashboard', routeLink: '' },
     { logoURL: 'assets/appointments.png', logoName: 'Appointments', routeLink: 'appointM/appointments' },
-    { logoURL: 'assets/doctor.png', logoName: 'Doctors', routeLink: '' },
+    { logoURL: 'assets/doctor.png', logoName: 'Doctors', routeLink: 'docM/doctors' },
     { logoURL: 'assets/department.png', logoName: 'Departments', routeLink: '' },
     { logoURL: 'assets/patient.png', logoName: 'Patients', routeLink: '' },
     { logoURL: 'assets/payment.png', logoName: 'Payments', routeLink: '' },
