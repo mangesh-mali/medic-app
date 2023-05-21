@@ -1,0 +1,37 @@
+<p>patient-comp works!</p>
+
+<h3 style="color: rgb(146, 146, 146);">Patients</h3>
+
+<table>
+    <tr>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Number</th>
+        <th>Last Visit</th>
+        <th>Status</th>
+        <th style="text-align: center;">Action</th>
+    </tr>
+    <tr *ngFor="let i of data">
+        <td><img class="LAImg" [src]="i.img" alt=""></td>
+        <td>{{i.name}}</td>
+        <td>{{i.id}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.number}}</td>
+        <td>{{i.lastVisit}}</td>
+        <td>{{i.status}}</td>
+        <td>
+            <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
+            <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<div class="lastSection">
+    <div class="container">
+        <span class="lastSectionGrey"> Medicine ></span> Patients
+    </div>
+</div>

@@ -30,6 +30,11 @@
     background-color: #fbfbfb;
 }
 
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .lastSection {
     background-color: #fbfbfb;
     padding: 15px;
@@ -121,10 +126,6 @@ a.firstAnchor:hover {
     float: right;
 }
 
-.container {
-    padding-left: 50px;
-    padding-right: 50px;
-}
 
 .dropdown {
     position: relative;

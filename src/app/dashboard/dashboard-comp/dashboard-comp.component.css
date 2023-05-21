@@ -44,3 +44,23 @@ td {
 .LAImg {
     border-radius: 50%;
 }
+
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.lastSection {
+    position: fixed;
+    bottom: 20px;
+    background-color: #fbfbfb;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    height: 5%;
+}
+
+.lastSectionGrey {
+    color: rgb(146, 146, 146);
+}

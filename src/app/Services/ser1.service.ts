@@ -68,4 +68,22 @@ export class Ser1Service {
     return this.http.delete("http://localhost:3000/departments/" + a);
   }
   //Department API ends
+
+  //Patients API starts
+  getPat() {
+    return this.http.get("http://localhost:3000/patients");
+  }
+
+  addPat(a: any) {
+    return this.http.post("http://localhost:3000/patients", a);
+  }
+
+  updatePat(a: any) {
+    return this.http.put("http://localhost:3000/patients/" + a.id, a);
+  }
+
+  delPat(a: any) {
+    return this.http.delete("http://localhost:3000/patients/" + a);
+  }
+  //Patients API ends
 }
