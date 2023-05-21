@@ -23,3 +23,9 @@
     overflow: hidden;
     position: relative;
 }
+
+.imgTeam {
+
+    width: 35px;
+    border-radius: 50%;
+}

@@ -12,7 +12,7 @@ export class AppComponent {
     { logoURL: 'assets/dashboard.png', logoName: 'Dashboard', routeLink: '' },
     { logoURL: 'assets/appointments.png', logoName: 'Appointments', routeLink: 'appointM/appointments' },
     { logoURL: 'assets/doctor.png', logoName: 'Doctors', routeLink: 'docM/doctors' },
-    { logoURL: 'assets/department.png', logoName: 'Departments', routeLink: '' },
+    { logoURL: 'assets/department.png', logoName: 'Departments', routeLink: 'depM/departments' },
     { logoURL: 'assets/patient.png', logoName: 'Patients', routeLink: '' },
     { logoURL: 'assets/payment.png', logoName: 'Payments', routeLink: '' },
   ]

@@ -50,4 +50,22 @@ export class Ser1Service {
     return this.http.delete("http://localhost:3000/doctors/" + a);
   }
   //Doctor API ends
+
+  //Department API starts
+  getDep() {
+    return this.http.get("http://localhost:3000/departments");
+  }
+
+  addDep(a: any) {
+    return this.http.post("http://localhost:3000/departments", a);
+  }
+
+  updateDep(a: any) {
+    return this.http.put("http://localhost:3000/departments/" + a.id, a);
+  }
+
+  delDep(a: any) {
+    return this.http.delete("http://localhost:3000/departments/" + a);
+  }
+  //Department API ends
 }
