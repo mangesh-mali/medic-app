@@ -7,7 +7,7 @@
         </div>
         <div class="col-lg-7 title-count">
             <div class="title">{{i.title}}</div>
-            <div class="count">{{i.count}}</div>
+            <div class="count">{{i.count | dashPipe:i.title}}</div>
         </div>
     </div>
 </div>

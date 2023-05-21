@@ -18,15 +18,15 @@
         <td>{{i.patient}}</td>
         <td>{{i.doctor}}</td>
         <td class="greyClass">{{i.billDate}}</td>
-        <td>{{i.charges}}</td>
+        <td>{{i.charges | currency}}</td>
         <td>{{i.tax}}</td>
-        <td>{{i.discount}}</td>
-        <td><b>{{i.total}}</b></td>
+        <td>{{i.discount | currency}}</td>
+        <td><b>{{i.total | currency}}</b></td>
     </tr>
 </table>
 
 <div class="lastSection">
     <div class="container">
-        <span class="lastSectionGrey"> Medicine ></span> Patients
+        <span class="lastSectionGrey"> Medicine ></span> Payments
     </div>
 </div>

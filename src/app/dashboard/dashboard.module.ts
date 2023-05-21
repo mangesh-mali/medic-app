@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardCompComponent } from './dashboard-comp/dashboard-comp.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { DashPipePipe } from './dash-pipe.pipe';
 
 const routes: Routes = [
   { path: '', component: DashboardCompComponent }
@@ -10,7 +11,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    DashboardCompComponent
+    DashboardCompComponent,
+    DashPipePipe
   ],
   imports: [
     CommonModule,
