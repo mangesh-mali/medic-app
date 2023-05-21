@@ -37,6 +37,7 @@ td {
     height: 5%;
 }
 
-.lastSectionGrey {
+.lastSectionGrey,
+.greyClass {
     color: rgb(146, 146, 146);
 }

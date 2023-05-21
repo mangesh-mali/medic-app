@@ -1,0 +1,32 @@
+<p>payment-comp works!</p>
+
+<h3 style="color: rgb(146, 146, 146);">Payments</h3>
+
+<table>
+    <tr>
+        <th>Bill No</th>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Charges</th>
+        <th>Tax</th>
+        <th>Discount</th>
+        <th>Total</th>
+    </tr>
+    <tr *ngFor="let i of data">
+        <td class="greyClass">{{i.billNo}}</td>
+        <td>{{i.patient}}</td>
+        <td>{{i.doctor}}</td>
+        <td class="greyClass">{{i.billDate}}</td>
+        <td>{{i.charges}}</td>
+        <td>{{i.tax}}</td>
+        <td>{{i.discount}}</td>
+        <td><b>{{i.total}}</b></td>
+    </tr>
+</table>
+
+<div class="lastSection">
+    <div class="container">
+        <span class="lastSectionGrey"> Medicine ></span> Patients
+    </div>
+</div>

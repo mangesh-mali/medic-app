@@ -86,4 +86,22 @@ export class Ser1Service {
     return this.http.delete("http://localhost:3000/patients/" + a);
   }
   //Patients API ends
+
+  //Payments API starts
+  getPay() {
+    return this.http.get("http://localhost:3000/payments");
+  }
+
+  addPay(a: any) {
+    return this.http.post("http://localhost:3000/payments", a);
+  }
+
+  updatePay(a: any) {
+    return this.http.put("http://localhost:3000/payments/" + a.id, a);
+  }
+
+  delPay(a: any) {
+    return this.http.delete("http://localhost:3000/payments/" + a);
+  }
+  //Payments API ends
 }

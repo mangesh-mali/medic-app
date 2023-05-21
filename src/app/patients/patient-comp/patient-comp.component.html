@@ -17,11 +17,11 @@
     <tr *ngFor="let i of data">
         <td><img class="LAImg" [src]="i.img" alt=""></td>
         <td>{{i.name}}</td>
-        <td>{{i.id}}</td>
-        <td>{{i.age}}</td>
+        <td class="lastSectionGrey">{{i.id}}</td>
+        <td class="lastSectionGrey">{{i.age}}</td>
         <td>{{i.address}}</td>
         <td>{{i.number}}</td>
-        <td>{{i.lastVisit}}</td>
+        <td class="lastSectionGrey">{{i.lastVisit}}</td>
         <td>{{i.status}}</td>
         <td>
             <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
