@@ -14,7 +14,7 @@
             <th>Status</th>
             <th style="text-align: center;">Action</th>
         </tr>
-        <tr *ngFor="let i of data">
+        <tr *ngFor="let i of data; let ind = index">
             <td><img class="LAImg" [src]="i.img" alt=""></td>
             <td>{{i.name}}</td>
             <td class="lastSectionGrey">{{i.id}}</td>
@@ -22,14 +22,50 @@
             <td>{{i.address}}</td>
             <td>{{i.number}}</td>
             <td class="lastSectionGrey">{{i.lastVisit}}</td>
-            <td>{{i.status}}</td>
+            <td><span [ngClass]="i.status == 'Approved' ? 'statusClass1': 'statusClass2' ">{{i.status}}</span></td>
             <td>
                 <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
-                <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
+                <button type="button" class="btn btn-warning" (click)="del(i.id,ind)">Delete</button>
             </td>
         </tr>
     </table>
 </div>
+
+<!-- <button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addPat" (click)="openPopup()"><img
+        src="assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
+</button> -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Doctor</h4>
+            </div>
+            <form #frm="ngForm">
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel" ngModel
+                        [(ngModel)]="nm">
+                    <input type="text" class="form-control mb-2" placeholder="Age" name="age" #age="ngModel" ngModel
+                        [(ngModel)]="ag">
+                    <input type="text" class="form-control mb-2" placeholder="Address" name="address" #address="ngModel"
+                        ngModel [(ngModel)]="adr">
+                    <input type="text" class="form-control mb-2" placeholder="Number" name="number" #number="ngModel"
+                        ngModel [(ngModel)]="num">
+                    <input type="text" class="form-control mb-2" placeholder="Last Visit" name="lastVisit"
+                        #lastVisit="ngModel" ngModel [(ngModel)]="lV">
+                    <select class="form-control mb-2" name="status" id="" [(ngModel)]="selStatus">
+                        <option *ngFor="let i of status" [value]="">{{i}}</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" (click)="update(frm)">Update
+                        Details</button>
+                    <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <div class="lastSection">
     <div class="containerNew">
         <span class="lastSectionGrey"> Medicine ></span> Patients

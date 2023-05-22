@@ -623,15 +623,15 @@
   ],
   "patients": [
     {
-      "img": "http://medic-app.type-code.pro/assets/content/user-40-1.jpg",
       "name": "Liam",
-      "id": "10021",
       "age": "42",
       "address": "71 Pilgrim Avenue Chevy Chase, MD 20815",
       "number": "0126596578",
       "lastVisit": "18 Dec 2018",
       "status": "Approved",
-      "gender": "Male"
+      "gender": "Male",
+      "img": "http://medic-app.type-code.pro/assets/content/user-40-1.jpg",
+      "id": "10021"
     },
     {
       "img": "http://medic-app.type-code.pro/assets/content/user-40-2.jpg",
