@@ -131,6 +131,7 @@ a.firstAnchor:hover {
 .dropdown-menu {
     display: none;
     position: absolute;
+    right: 0px;
     z-index: 1;
 }
 
