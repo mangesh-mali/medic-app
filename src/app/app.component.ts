@@ -16,6 +16,9 @@ export class AppComponent {
     { logoURL: 'assets/department.png', logoName: 'Departments', routeLink: 'depM/departments' },
     { logoURL: 'assets/patient.png', logoName: 'Patients', routeLink: 'patM/patients' },
     { logoURL: 'assets/payment.png', logoName: 'Payments', routeLink: 'payM/payments' },
+    { logoURL: 'assets/bug.png', logoName: 'InterComp1RxJS', routeLink: 'comp1' },
+    { logoURL: 'assets/bug.png', logoName: 'InterComp2RxJS', routeLink: 'comp2' },
+
   ]
 
   public subTitle2: any = [

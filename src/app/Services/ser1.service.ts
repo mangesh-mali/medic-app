@@ -1,12 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Ser1Service {
+  private rxjsData: any = new BehaviorSubject('default message');
 
   constructor(private http: HttpClient) { }
+
+  setData(a: any) {
+    this.rxjsData.next(a);
+  }
+
+  retrieveData() {
+    return this.rxjsData;
+  }
+
   getData() {
     return this.http.get("http://localhost:3000/dashData");
   }
