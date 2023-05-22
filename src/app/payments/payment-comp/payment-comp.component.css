@@ -45,3 +45,9 @@ td {
 .lastSectionGrey {
     color: rgb(146, 146, 146);
 }
+
+.addPay {
+    position: fixed;
+    bottom: 30px;
+    right: -10px;
+}

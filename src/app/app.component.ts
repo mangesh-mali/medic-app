@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'medic-app';
+  displayStyle = "none";
 
   public subTitle: any = [
     { logoURL: 'assets/dashboard.png', logoName: 'Dashboard', routeLink: '' },
@@ -37,4 +38,25 @@ export class AppComponent {
       ]
     }
   ]
+
+  gaurdFunction(a: any) {
+    console.log(a);
+    // if (a == "Payments") {
+    //   this.openPopup();
+    // }
+  }
+
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    sessionStorage.clear;
+    this.displayStyle = "none";
+  }
+
+  login(f: any) {
+    console.log(f.value);
+    sessionStorage.clear;
+    sessionStorage.setItem("credentials", JSON.stringify(f.value));
+  }
 }

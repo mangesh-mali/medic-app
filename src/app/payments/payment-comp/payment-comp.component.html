@@ -1,7 +1,6 @@
 <p>payment-comp works!</p>
 <div class="container">
     <h3 style="color: rgb(146, 146, 146);">Payments</h3>
-
     <table>
         <tr>
             <th>Bill No</th>
@@ -25,6 +24,43 @@
         </tr>
     </table>
 </div>
+
+<button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addPay" (click)="openPopup()"><img
+        src="assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
+</button>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Payment</h4>
+            </div>
+            <form #frm="ngForm">
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" placeholder="Bill No" name="billNo" #billNo="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Patient" name="patient" #patient="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Doctor" name="doctor" #doctor="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Date" name="billDate" #billDate="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Charges" name="charges" #charges="ngModel"
+                        ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Taxes" name="tax" #tax="ngModel" ngModel>
+                    <input type="text" class="form-control mb-2" placeholder="Discount" name="discount"
+                        #discount="ngModel" ngModel>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" (click)="addPay(frm)">Add
+                        Payment</button>
+                    <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <div class="lastSection">
     <div class="containerNew">
         <span class="lastSectionGrey"> Medicine ></span> Payments

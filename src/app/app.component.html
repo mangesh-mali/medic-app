@@ -9,8 +9,8 @@
       </div>
       <div class="sub-title">
         <ul *ngFor="let sT of subTitle" style="list-style-type: none;">
-          <a class="firstAnchor" [routerLink]="sT.routeLink">
-            <li><img class="subTitleImg" [src]="sT.logoURL" alt=""> {{sT.logoName}}</li>
+          <a class="firstAnchor" [routerLink]="sT.routeLink" (click)="gaurdFunction(sT.logoName)">
+            <li><img class="subTitleImg" [src]="sT.logoURL" alt=""> {{sT.logoName}} </li>
           </a>
         </ul>
       </div>
@@ -26,6 +26,29 @@
       </div>
     </div>
   </div>
+
+  <!-- gaurd auth starts -->
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login Required</h4>
+        </div>
+        <form #frm="ngForm">
+          <div class="modal-body">
+            <input type="text" class="form-control mb-2" placeholder="Username" name="username" #username="ngModel"
+              ngModel>
+            <input type="password" class="form-control mb-2" placeholder="Password" name="pass" #pass="ngModel" ngModel>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" (click)="login(frm)">Login</button>
+            <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- gaurd auth ends -->
 
   <div class="rightside">
     <form id="search-form">

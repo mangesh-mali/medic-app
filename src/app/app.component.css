@@ -137,3 +137,7 @@ a.firstAnchor:hover {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+.modal {
+    background: rgba(0, 0, 0, .5);
+}

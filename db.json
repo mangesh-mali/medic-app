@@ -767,6 +767,7 @@
   ],
   "payments": [
     {
+      "id": 1,
       "billNo": "132",
       "billDate": "18 Feb 2019",
       "patient": "Priya Patel",
@@ -777,6 +778,7 @@
       "total": "160"
     },
     {
+      "id": 2,
       "billNo": "131",
       "billDate": "17 Feb 2019",
       "patient": "Mayank Jani",
@@ -787,6 +789,7 @@
       "total": "125"
     },
     {
+      "id": 3,
       "billNo": "130",
       "billDate": "17 Feb 2019",
       "patient": "Jenish Shah",
@@ -797,6 +800,7 @@
       "total": "75"
     },
     {
+      "id": 4,
       "billNo": "129",
       "billDate": "16 Feb 2019",
       "patient": "Jayna Sharma",
@@ -807,6 +811,7 @@
       "total": "48"
     },
     {
+      "id": 5,
       "billNo": "128",
       "billDate": "15 Feb 2019",
       "patient": "Sonali Malik",
@@ -817,6 +822,7 @@
       "total": "124"
     },
     {
+      "id": 6,
       "billNo": "132",
       "billDate": "13 Feb 2019",
       "patient": "Mayank Jani",
@@ -827,6 +833,7 @@
       "total": "27"
     },
     {
+      "id": 7,
       "billNo": "132",
       "billDate": "13 Feb 2019",
       "patient": "Pooja Patel",
@@ -837,6 +844,7 @@
       "total": "340"
     },
     {
+      "id": 8,
       "billNo": "127",
       "billDate": "12 Feb 2019",
       "patient": "Pooja Patel",
@@ -847,6 +855,7 @@
       "total": "130"
     },
     {
+      "id": 9,
       "billNo": "126",
       "billDate": "11 Feb 2019",
       "patient": "Jacob Ryan",
@@ -857,6 +866,7 @@
       "total": "217"
     },
     {
+      "id": 10,
       "billNo": "125",
       "billDate": "10 Feb 2019",
       "patient": "Megha Trivedi",
@@ -867,6 +877,7 @@
       "total": "129"
     },
     {
+      "id": 11,
       "billNo": "124",
       "billDate": "9 Feb 2019",
       "patient": "Pooja Patel",
@@ -877,6 +888,7 @@
       "total": "128"
     },
     {
+      "id": 12,
       "billNo": "123",
       "billDate": "8 Feb 2019",
       "patient": "Sofia Smitt",
@@ -887,6 +899,7 @@
       "total": "110"
     },
     {
+      "id": 13,
       "billNo": "122",
       "billDate": "8 Feb 2019",
       "patient": "Gregor Mann",
@@ -897,6 +910,7 @@
       "total": "55"
     },
     {
+      "id": 14,
       "billNo": "121",
       "billDate": "8 Feb 2019",
       "patient": "Megha Trivedi",
@@ -907,6 +921,7 @@
       "total": "30"
     },
     {
+      "id": 15,
       "billNo": "120",
       "billDate": "6 Feb 2019",
       "patient": "Tom Callahan",
@@ -917,6 +932,7 @@
       "total": "46"
     },
     {
+      "id": 16,
       "billNo": "119",
       "billDate": "5 Feb 2019",
       "patient": "Sasha Dey",
@@ -927,6 +943,7 @@
       "total": "20"
     },
     {
+      "id": 17,
       "billNo": "118",
       "billDate": "5 Feb 2019",
       "patient": "Sasha Dey",
@@ -937,6 +954,7 @@
       "total": "29"
     },
     {
+      "id": 18,
       "billNo": "117",
       "billDate": "4 Feb 2019",
       "patient": "Peter Outs",
@@ -947,6 +965,7 @@
       "total": "30"
     },
     {
+      "id": 19,
       "billNo": "116",
       "billDate": "3 Feb 2019",
       "patient": "Pooja Patel",
@@ -957,6 +976,7 @@
       "total": "136"
     },
     {
+      "id": 20,
       "billNo": "115",
       "billDate": "2 Feb 2019",
       "patient": "Jacob Ryan",
@@ -965,6 +985,17 @@
       "tax": "10%",
       "discount": "5",
       "total": "77"
+    },
+    {
+      "billNo": "200",
+      "patient": "test-patient",
+      "doctor": "test-doctor",
+      "billDate": "12 feb 2022",
+      "charges": "150",
+      "tax": "7%",
+      "discount": "4",
+      "total": 156.22,
+      "id": 21
     }
   ]
 }
