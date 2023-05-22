@@ -48,3 +48,13 @@
 .lastSectionGrey {
     color: rgb(146, 146, 146);
 }
+
+.addDoc {
+    position: fixed;
+    bottom: 30px;
+    right: -10px;
+}
+
+.modal {
+    background: rgba(0, 0, 0, .5);
+}
