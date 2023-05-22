@@ -53,7 +53,7 @@ export class Ser1Service {
 
   //Department API starts
   getDep() {
-    return this.http.get("http://localhost:3000/departments");
+    return this.http.get("http://localhost:3000/departments").toPromise();
   }
 
   addDep(a: any) {
