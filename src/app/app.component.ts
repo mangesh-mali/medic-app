@@ -18,6 +18,8 @@ export class AppComponent {
     { logoURL: 'assets/payment.png', logoName: 'Payments', routeLink: 'payM/payments' },
     { logoURL: 'assets/bug.png', logoName: 'InterComp1RxJS', routeLink: 'comp1' },
     { logoURL: 'assets/bug.png', logoName: 'InterComp2RxJS', routeLink: 'comp2' },
+    { logoURL: 'assets/parentchild.png', logoName: 'Parent', routeLink: 'parent' },
+    // { logoURL: 'assets/parentchild.png', logoName: 'Child', routeLink: 'child' },
 
   ]
 

@@ -1,0 +1,19 @@
+<p>parent works!</p>
+
+<div class="main">
+    <div class="left half">
+        Parent Div
+
+        <hr>
+        <br>
+
+        Child Data using @Output : {{parentEmit}}
+        <hr><br>
+        Child Data using @ViewChild : {{newParentVar}}
+
+    </div>
+    <div class="right half">
+        Child Div
+        <app-child [childVar]="parentVar" (childEmit)="parentFunction($event)"></app-child>
+    </div>
+</div>

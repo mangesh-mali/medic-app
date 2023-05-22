@@ -1,0 +1,15 @@
+.half {
+    width: 50%;
+}
+
+.main {
+    display: flex;
+}
+
+.left {
+    background-color: coral;
+}
+
+.right {
+    background-color: rgb(205, 205, 2);
+}

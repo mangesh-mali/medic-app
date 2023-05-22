@@ -6,6 +6,8 @@ import { PageNotFoundCompComponent } from './user/page-not-found-comp/page-not-f
 import { DepartmentIndividualComponent } from './departments/department-individual/department-individual.component';
 import { Comp1Component } from './user/comp1/comp1.component';
 import { Comp2Component } from './user/comp2/comp2.component';
+import { ParentComponent } from './user/parent/parent.component';
+import { ChildComponent } from './user/child/child.component';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'department-details/:title', component: DepartmentIndividualComponent },
   { path: 'comp1', component: Comp1Component },
   { path: 'comp2', component: Comp2Component },
+  { path: 'parent', component: ParentComponent },
+  { path: 'child', component: ChildComponent },
   { path: '**', component: PageNotFoundCompComponent }
 ];
 
