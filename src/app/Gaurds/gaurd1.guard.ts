@@ -13,19 +13,19 @@ export class Gaurd1Guard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
 
-    // var username = prompt("Enter Username");
-    // var pass = prompt("Enter Password");
-    // if (username == 'admin' && pass == '123') {
-    //   alert("Access Granted");
-    //   return true;
-    // } else {
-    //   alert("Access Denied");
-    //   return false;
-    // }
+    var username = prompt("Enter Username");
+    var pass = prompt("Enter Password");
+    if (username == 'admin' && pass == '123') {
+      alert("Access Granted");
+      return true;
+    } else {
+      alert("Access Denied");
+      return false;
+    }
 
 
-    // bypass
-    return true;
+    // // bypass
+    // return true;
 
   }
 
