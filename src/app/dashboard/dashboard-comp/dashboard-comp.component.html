@@ -1,63 +1,65 @@
 <p>dashboard-comp works!</p>
 
-<div class="row cardRow">
-    <div *ngFor="let i of firstRowData" class="col-lg-3 firstRow">
-        <div class="col-lg-5 rowImg">
-            <img [src]="i.imgFile" alt="">
-        </div>
-        <div class="col-lg-7 title-count">
-            <div class="title">{{i.title}}</div>
-            <div class="count">{{i.count | dashPipe:i.title}}</div>
+<div class="container">
+
+    <div class="row cardRow">
+        <div *ngFor="let i of firstRowData" class="col-lg-3 firstRow">
+            <div class="col-lg-5 rowImg">
+                <img [src]="i.imgFile" alt="">
+            </div>
+            <div class="col-lg-7 title-count">
+                <div class="title">{{i.title}}</div>
+                <div class="count">{{i.count | dashPipe:i.title}}</div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="secondRow">
-    <h4>Hospital survey</h4>
-</div>
+    <div class="secondRow">
+        <h4>Hospital survey</h4>
+    </div>
 
-<div class="thirdRow">
-    <div class="row">
-        <div class="col-lg-4">
-            <h4>Patients age</h4>
-        </div>
-        <div class="col-lg-4">
-            <h4>Patients gender</h4>
-        </div>
-        <div class="col-lg-4">
-            <h4>Departments</h4>
+    <div class="thirdRow">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>Patients age</h4>
+            </div>
+            <div class="col-lg-4">
+                <h4>Patients gender</h4>
+            </div>
+            <div class="col-lg-4">
+                <h4>Departments</h4>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="fourthRow">
-    <h4>Last appointments</h4>
-    <table>
-        <tr>
-            <th>Photo</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Date</th>
-            <th>Visit Time</th>
-            <th>Number</th>
-            <th>Doctor</th>
-            <th>Injury / Condition</th>
-        </tr>
-        <tr *ngFor="let i of dataSource">
-            <td><img class="LAImg" [src]="i.img" alt=""></td>
-            <td>{{i.name}}</td>
-            <td>{{i.email}}</td>
-            <td class="lastSectionGrey">{{i.date}}</td>
-            <td class="lastSectionGrey">{{i.fromTo}}</td>
-            <td>{{i.number}}</td>
-            <td>{{i.doctor}}</td>
-            <td>{{i.injury}}</td>
-        </tr>
-    </table>
+    <div class="fourthRow">
+        <h4>Last appointments</h4>
+        <table>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Visit Time</th>
+                <th>Number</th>
+                <th>Doctor</th>
+                <th>Injury / Condition</th>
+            </tr>
+            <tr *ngFor="let i of dataSource">
+                <td><img class="LAImg" [src]="i.img" alt=""></td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td class="lastSectionGrey">{{i.date}}</td>
+                <td class="lastSectionGrey">{{i.fromTo}}</td>
+                <td>{{i.number}}</td>
+                <td>{{i.doctor}}</td>
+                <td>{{i.injury}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
-
 <div class="lastSection">
-    <div class="container">
+    <div class="containerNew">
         <span class="lastSectionGrey"> Dasboards ></span> Default
     </div>
 </div>

@@ -53,15 +53,20 @@ td {
     padding-right: 50px;
 }
 
+.containerNew {
+    padding-left: 50px;
+    margin: 0;
+}
+
 .lastSection {
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
+    width: 100%;
     background-color: #fbfbfb;
     padding: 15px;
     display: flex;
-    align-items: center;
     flex-flow: column;
-    height: 5%;
+    height: 7%;
 }
 
 .lastSectionGrey {

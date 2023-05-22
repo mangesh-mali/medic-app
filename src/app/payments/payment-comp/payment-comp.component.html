@@ -1,32 +1,32 @@
 <p>payment-comp works!</p>
+<div class="container">
+    <h3 style="color: rgb(146, 146, 146);">Payments</h3>
 
-<h3 style="color: rgb(146, 146, 146);">Payments</h3>
-
-<table>
-    <tr>
-        <th>Bill No</th>
-        <th>Patient</th>
-        <th>Doctor</th>
-        <th>Date</th>
-        <th>Charges</th>
-        <th>Tax</th>
-        <th>Discount</th>
-        <th>Total</th>
-    </tr>
-    <tr *ngFor="let i of data">
-        <td class="greyClass">{{i.billNo}}</td>
-        <td>{{i.patient}}</td>
-        <td>{{i.doctor}}</td>
-        <td class="greyClass">{{i.billDate}}</td>
-        <td>{{i.charges | currency}}</td>
-        <td>{{i.tax}}</td>
-        <td>{{i.discount | currency}}</td>
-        <td><b>{{i.total | currency}}</b></td>
-    </tr>
-</table>
-
+    <table>
+        <tr>
+            <th>Bill No</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Charges</th>
+            <th>Tax</th>
+            <th>Discount</th>
+            <th>Total</th>
+        </tr>
+        <tr *ngFor="let i of data">
+            <td class="greyClass">{{i.billNo}}</td>
+            <td>{{i.patient}}</td>
+            <td>{{i.doctor}}</td>
+            <td class="greyClass">{{i.billDate}}</td>
+            <td>{{i.charges | currency}}</td>
+            <td>{{i.tax}}</td>
+            <td>{{i.discount | currency}}</td>
+            <td><b>{{i.total | currency}}</b></td>
+        </tr>
+    </table>
+</div>
 <div class="lastSection">
-    <div class="container">
+    <div class="containerNew">
         <span class="lastSectionGrey"> Medicine ></span> Payments
     </div>
 </div>

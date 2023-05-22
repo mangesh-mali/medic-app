@@ -1,26 +1,27 @@
 <p>doctor-comp works!</p>
+<div class="container">
+    <h3 style="color: rgb(146, 146, 146);">Doctors</h3>
 
-<h3 style="color: rgb(146, 146, 146);">Doctors</h3>
-
-<div class="cardDiv row">
-    <div class="card text-center m-4 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;" *ngFor="let i of data">
-        <img class="card-img-top card-img-wrap" [src]="i.img" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{i.name}}</h5>
-            <h6 class="card-text">{{i.role}}</h6>
-            <div>
-                <a href="#" *ngFor="let j of i.social">
-                    <img width="50px" [src]="j.icon" alt="">
-                </a>
+    <div class="cardDiv row">
+        <div class="card text-center m-4 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;" *ngFor="let i of data">
+            <img class="card-img-top card-img-wrap" [src]="i.img" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <h6 class="card-text">{{i.role}}</h6>
+                <div>
+                    <a href="#" *ngFor="let j of i.social">
+                        <img width="50px" [src]="j.icon" alt="">
+                    </a>
+                </div>
+                <p class="card-text">{{i.address}}</p>
+                <a href="#" class="btn btn-primary">View Profile</a>
             </div>
-            <p class="card-text">{{i.address}}</p>
-            <a href="#" class="btn btn-primary">View Profile</a>
         </div>
     </div>
 </div>
 
 <div class="lastSection">
-    <div class="container">
+    <div class="containerNew">
         <span class="lastSectionGrey"> Medicine ></span> Doctors
     </div>
 </div>

@@ -1,81 +1,82 @@
 <p>appointments-comp works!</p>
 
-<h3 style="color: rgb(146, 146, 146);">Appointments</h3>
+<div class="container">
+    <h3 style="color: rgb(146, 146, 146);">Appointments</h3>
+    <table>
+        <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Visit Time</th>
+            <th>Number</th>
+            <th>Doctor</th>
+            <th>Injury / Condition</th>
+            <th style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of data">
+            <td><img class="LAImg" [src]="i.img" alt=""></td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td class="lastSectionGrey">{{i.date}}</td>
+            <td class="lastSectionGrey">{{i.fromTo}}</td>
+            <td>{{i.number}}</td>
+            <td>{{i.doctor}}</td>
+            <td>{{i.injury}}</td>
+            <td>
+                <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
+                <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
 
-<table>
-    <tr>
-        <th>Photo</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Date</th>
-        <th>Visit Time</th>
-        <th>Number</th>
-        <th>Doctor</th>
-        <th>Injury / Condition</th>
-        <th style="text-align: center;">Action</th>
-    </tr>
-    <tr *ngFor="let i of data">
-        <td><img class="LAImg" [src]="i.img" alt=""></td>
-        <td>{{i.name}}</td>
-        <td>{{i.email}}</td>
-        <td class="lastSectionGrey">{{i.date}}</td>
-        <td class="lastSectionGrey">{{i.fromTo}}</td>
-        <td>{{i.number}}</td>
-        <td>{{i.doctor}}</td>
-        <td>{{i.injury}}</td>
-        <td>
-            <button type="button" class="btn btn-info" (click)="edit(i)">Edit</button>&nbsp;
-            <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
-        </td>
-    </tr>
-</table>
 
+    <button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addApp"
+        (click)="openPopup()"><img src="assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
+    </button>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" *ngIf="addButtonAction">Add Appointment</h4>
+                    <h4 class="modal-title" *ngIf="!addButtonAction">Edit Appointment</h4>
+                </div>
+                <form #frm="ngForm">
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel"
+                            ngModel [(ngModel)]="nm">
+                        <input type="text" class="form-control mb-2" placeholder="Doctor" name="doctor"
+                            #doctor="ngModel" ngModel [(ngModel)]="doc">
+                        <input type="email" class="form-control mb-2" placeholder="Email" name="email" #email="ngModel"
+                            ngModel [(ngModel)]="eml">
+                        <input type="text" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel"
+                            ngModel [(ngModel)]="dt">
+                        <input type="text" class="form-control mb-2" placeholder="Time From" name="timeFrom"
+                            #timeFrom="ngModel" ngModel [(ngModel)]="tF">
+                        <input type="text" class="form-control mb-2" placeholder="Time To" name="timeTo"
+                            #timeTo="ngModel" ngModel [(ngModel)]="tT">
+                        <input type="number" class="form-control mb-2" placeholder="Number" name="number"
+                            #number="ngModel" ngModel [(ngModel)]="num">
+                        <input type="text" class="form-control mb-2" placeholder="Injury" name="injury"
+                            #injury="ngModel" ngModel [(ngModel)]="inj">
 
-<button style="margin: 50px; padding: 10px" type="button" class="btn btn-secondary addApp" (click)="openPopup()"><img
-        src="assets/add_FILL0_wght400_GRAD0_opsz48.png" height="35px" alt="">
-</button>
-<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" *ngIf="addButtonAction">Add Appointment</h4>
-                <h4 class="modal-title" *ngIf="!addButtonAction">Edit Appointment</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" *ngIf="addButtonAction" class="btn btn-success" (click)="addApp(frm)">Add
+                            Appointment</button>
+                        <button type="submit" *ngIf="!addButtonAction" class="btn btn-warning"
+                            (click)="updateApp(frm)">Update
+                            Appointment</button>
+                        <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+                    </div>
+                </form>
             </div>
-            <form #frm="ngForm">
-                <div class="modal-body">
-                    <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel" ngModel
-                        [(ngModel)]="nm">
-                    <input type="text" class="form-control mb-2" placeholder="Doctor" name="doctor" #doctor="ngModel"
-                        ngModel [(ngModel)]="doc">
-                    <input type="email" class="form-control mb-2" placeholder="Email" name="email" #email="ngModel"
-                        ngModel [(ngModel)]="eml">
-                    <input type="text" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel" ngModel
-                        [(ngModel)]="dt">
-                    <input type="text" class="form-control mb-2" placeholder="Time From" name="timeFrom"
-                        #timeFrom="ngModel" ngModel [(ngModel)]="tF">
-                    <input type="text" class="form-control mb-2" placeholder="Time To" name="timeTo" #timeTo="ngModel"
-                        ngModel [(ngModel)]="tT">
-                    <input type="number" class="form-control mb-2" placeholder="Number" name="number" #number="ngModel"
-                        ngModel [(ngModel)]="num">
-                    <input type="text" class="form-control mb-2" placeholder="Injury" name="injury" #injury="ngModel"
-                        ngModel [(ngModel)]="inj">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" *ngIf="addButtonAction" class="btn btn-success" (click)="addApp(frm)">Add
-                        Appointment</button>
-                    <button type="submit" *ngIf="!addButtonAction" class="btn btn-warning"
-                        (click)="updateApp(frm)">Update
-                        Appointment</button>
-                    <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>
 
 <div class="lastSection">
-    <div class="container">
+    <div class="containerNew">
         <span class="lastSectionGrey"> Medicine ></span> Appointments
     </div>
 </div>
