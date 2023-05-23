@@ -38,6 +38,20 @@
       "count": "5238"
     }
   ],
+  "users": [
+    {
+      "user": "admin",
+      "password": "123"
+    },
+    {
+      "user": "doctor",
+      "password": "123"
+    },
+    {
+      "user": "nurse",
+      "password": "123"
+    }
+  ],
   "lastAppoint": [
     {
       "img": "http://medic-app.type-code.pro/assets/content/user-40-1.jpg",

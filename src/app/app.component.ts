@@ -36,7 +36,7 @@ export class AppComponent {
     {
       name: 'Sessions',
       subName: [
-        { pg: 'Sign In', rL: '' },
+        { pg: 'Sign In', rL: 'signIn' },
         { pg: 'Sign Up', rL: '' },
         { pg: '404', rL: 'err' },
         { pg: '500', rL: '' },

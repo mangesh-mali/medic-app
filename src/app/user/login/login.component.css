@@ -1,0 +1,22 @@
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.loginBtn {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: rgba(0, 0, 0, .5);
+}
+
+.signBtn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

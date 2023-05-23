@@ -8,6 +8,7 @@ import { Comp1Component } from './user/comp1/comp1.component';
 import { Comp2Component } from './user/comp2/comp2.component';
 import { ParentComponent } from './user/parent/parent.component';
 import { ChildComponent } from './user/child/child.component';
+import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'comp2', component: Comp2Component },
   { path: 'parent', component: ParentComponent },
   { path: 'child', component: ChildComponent },
+  { path: 'signIn', component: LoginComponent },
   { path: '**', component: PageNotFoundCompComponent }
 ];
 

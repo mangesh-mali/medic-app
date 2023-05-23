@@ -5,6 +5,9 @@ import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -14,10 +17,14 @@ import { ChildComponent } from './child/child.component';
     Comp1Component,
     Comp2Component,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    LoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule
   ]
 })
 export class UserModule { }

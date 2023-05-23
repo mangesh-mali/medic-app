@@ -1,0 +1,40 @@
+<p>login works!</p>
+
+<div class="container">
+    <h3 style="color: rgb(146, 146, 146);" *ngIf="!currentUser || currentUser.length<1">Hello User, Welcome to Medic
+        Application. Please Sign In
+        with you
+        crendentials
+    </h3>
+    <h3 style="color: rgb(61, 114, 249);" *ngIf="currentUser?.length>0">Hello {{currentUser[0]?.user}}, Welcome aboard!!
+    </h3>
+
+
+    <div class="loginBtn">
+        <button class="btn btn-info signBtn" (click)="signIn()">Sign In</button>
+    </div>
+
+    <!-- login modal -->
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login Required</h4>
+                </div>
+                <form #frm="ngForm">
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-2" placeholder="Username" name="username"
+                            #username="ngModel" ngModel>
+                        <input type="password" class="form-control mb-2" placeholder="Password" name="pass"
+                            #pass="ngModel" ngModel>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" (click)="login(frm)">Login</button>
+                        <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

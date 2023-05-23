@@ -17,11 +17,10 @@
       <div class="main-title">
         APPS
       </div>
-      <div class="sub-title">
+      <div class="sub-title appsTitle">
         <div *ngFor="let sT of subTitle2">{{sT.name}}
-          <a href="#">
-            <li style="list-style-type: none;" class="subName" *ngFor="let i of sT.subName">{{i.pg}}</li>
-          </a>
+          <li style="list-style-type: none;" class="subName" *ngFor="let i of sT.subName"><a
+              [routerLink]="i.rL">{{i.pg}}</a></li>
         </div>
       </div>
     </div>

@@ -7,8 +7,21 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class Ser1Service {
   private rxjsData: any = new BehaviorSubject('default message');
+  private loggedUser: any = new BehaviorSubject('');
 
   constructor(private http: HttpClient) { }
+
+  getUsers() {
+    return this.http.get("http://localhost:3000/users");
+  }
+
+  setCredentials(a: any) {
+    this.loggedUser.next(a);
+  }
+
+  getCredentials() {
+    return this.loggedUser;
+  }
 
   setData(a: any) {
     this.rxjsData.next(a);
