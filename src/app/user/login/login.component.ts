@@ -41,6 +41,11 @@ export class LoginComponent {
     this.openPopup();
   }
 
+  signOut() {
+    let a = "";
+    this.ser.setCredentials(a);
+  }
+
   login(f: any) {
     f = f.value;
     console.log(f);

@@ -11,7 +11,9 @@
 
 
     <div class="loginBtn">
-        <button class="btn btn-info signBtn" (click)="signIn()">Sign In</button>
+        <button class="btn btn-info signBtn" (click)="signIn()" *ngIf="!currentUser || currentUser.length<1">Sign
+            In</button>
+        <button class="btn btn-danger signBtn" (click)="signOut()" *ngIf="currentUser?.length>0">Sign Out</button>
     </div>
 
     <!-- login modal -->
