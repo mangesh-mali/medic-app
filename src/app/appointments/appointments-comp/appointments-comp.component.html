@@ -41,30 +41,68 @@
                     <h4 class="modal-title" *ngIf="addButtonAction">Add Appointment</h4>
                     <h4 class="modal-title" *ngIf="!addButtonAction">Edit Appointment</h4>
                 </div>
-                <form #frm="ngForm">
+                <form #frm="ngForm" (ngSubmit)="frm.form.valid && addApp(frm)">
                     <div class="modal-body">
                         <input type="text" class="form-control mb-2" placeholder="Name" name="name" #name="ngModel"
-                            ngModel [(ngModel)]="nm">
+                            ngModel [(ngModel)]="nm" required [ngClass]="{'is-invalid':frm.submitted && name.invalid}">
+                        <div *ngIf="frm.submitted && name.invalid" class="invalid-feedback">
+                            Name is a Mandatory Field
+                        </div>
+
                         <input type="text" class="form-control mb-2" placeholder="Doctor" name="doctor"
-                            #doctor="ngModel" ngModel [(ngModel)]="doc">
+                            #doctor="ngModel" ngModel [(ngModel)]="doc" required
+                            [ngClass]="{'is-invalid':frm.submitted && doctor.invalid}">
+                        <div *ngIf="frm.submitted && doctor.invalid" class="invalid-feedback">
+                            Doctor Name is a Mandatory Field
+                        </div>
+
                         <input type="email" class="form-control mb-2" placeholder="Email" name="email" #email="ngModel"
-                            ngModel [(ngModel)]="eml">
+                            ngModel [(ngModel)]="eml" required [ngClass]="{'is-invalid':frm.submitted && email.invalid}"
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                        <div *ngIf="frm.submitted && email.invalid" class="invalid-feedback">
+                            <p *ngIf="email.errors?.['required']">Email is a Mandatory Field</p>
+                            <p *ngIf="email.errors?.['pattern']">Please enter a Valid Email </p>
+                        </div>
+
                         <input type="text" class="form-control mb-2" placeholder="Date" name="date" #date="ngModel"
-                            ngModel [(ngModel)]="dt">
+                            ngModel [(ngModel)]="dt" required [ngClass]="{'is-invalid':frm.submitted && date.invalid}">
+                        <div *ngIf="frm.submitted && date.invalid" class="invalid-feedback">
+                            Date is a Mandatory Field
+                        </div>
+
                         <input type="text" class="form-control mb-2" placeholder="Time From" name="timeFrom"
-                            #timeFrom="ngModel" ngModel [(ngModel)]="tF">
+                            #timeFrom="ngModel" ngModel [(ngModel)]="tF" required
+                            [ngClass]="{'is-invalid':frm.submitted && timeFrom.invalid}">
+                        <div *ngIf="frm.submitted && timeFrom.invalid" class="invalid-feedback">
+                            Time From is a Mandatory Field
+                        </div>
+
                         <input type="text" class="form-control mb-2" placeholder="Time To" name="timeTo"
-                            #timeTo="ngModel" ngModel [(ngModel)]="tT">
+                            #timeTo="ngModel" ngModel [(ngModel)]="tT" required
+                            [ngClass]="{'is-invalid':frm.submitted && timeTo.invalid}">
+                        <div *ngIf="frm.submitted && timeTo.invalid" class="invalid-feedback">
+                            Time To is a Mandatory Field
+                        </div>
+
                         <input type="number" class="form-control mb-2" placeholder="Number" name="number"
-                            #number="ngModel" ngModel [(ngModel)]="num">
+                            #number="ngModel" ngModel [(ngModel)]="num" required
+                            [ngClass]="{'is-invalid':frm.submitted && number.invalid}">
+                        <div *ngIf="frm.submitted && number.invalid" class="invalid-feedback">
+                            Number is a Mandatory Field
+                        </div>
+
                         <input type="text" class="form-control mb-2" placeholder="Injury" name="injury"
-                            #injury="ngModel" ngModel [(ngModel)]="inj">
+                            #injury="ngModel" ngModel [(ngModel)]="inj" required
+                            [ngClass]="{'is-invalid':frm.submitted && injury.invalid}">
+                        <div *ngIf="frm.submitted && injury.invalid" class="invalid-feedback">
+                            Please mention your Injury
+                        </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" *ngIf="addButtonAction" class="btn btn-success" (click)="addApp(frm)">Add
+                        <button type="submit" *ngIf="addButtonAction" class="btn btn-success">Add
                             Appointment</button>
-                        <button type="submit" *ngIf="!addButtonAction" class="btn btn-warning"
+                        <button type="button" *ngIf="!addButtonAction" class="btn btn-warning"
                             (click)="updateApp(frm)">Update
                             Appointment</button>
                         <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
