@@ -1,0 +1,19 @@
+#divChart {
+    display: block;
+    width: 80%;
+    /* height: 400px; */
+}
+
+.divChart {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+}
+
+.left,
+.right {
+    width: 50%;
+}
