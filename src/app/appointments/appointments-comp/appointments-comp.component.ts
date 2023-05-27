@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Ser1Service } from 'src/app/Services/ser1.service';
+// import { MatPaginatorModule } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-appointments-comp',

@@ -14,6 +14,7 @@
             <th>Injury / Condition</th>
             <th style="text-align: center;">Action</th>
         </tr>
+
         <tr *ngFor="let i of data">
             <td><img class="LAImg" [src]="i.img" alt=""></td>
             <td>{{i.name}}</td>
@@ -28,6 +29,9 @@
                 <button type="button" class="btn btn-warning" (click)="del(i.id)">Delete</button>
             </td>
         </tr>
+        <!-- <mat-paginator [length]="data.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page">
+        </mat-paginator> -->
     </table>
 
 
